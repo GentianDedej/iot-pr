@@ -36,6 +36,7 @@ int sampleDelay = 500;   //number of milliseconds between readings
 
 void setup()
 {
+    //START LIGHT PART
     // Set sensorPin as an INPUT
     pinMode(sensorPin, INPUT);
 
@@ -44,7 +45,21 @@ void setup()
     pinMode("NEED A CONTROLLER", OUTPUT);
     digitalWrite("NEED A CONTROLLER", HIGH);
 
-    // Initialize Serial, set the baud rate to 9600 bps.
+  
+    //END LIGHT PART
+
+  
+  
+  //START ACCELOMETRO PART
+   //
+   //Make sure the analog-to-digital converter takes its reference voltage from
+   // the AREF pin
+   pinMode(xpin, INPUT);
+   pinMode(ypin, INPUT);
+   pinMode(zpin, INPUT);
+  //END ACCELOMETRO PART
+  
+  // Initialize Serial, set the baud rate to 9600 bps.
     Serial.begin(9600);
 }
 
